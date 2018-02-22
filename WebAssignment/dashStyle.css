@@ -1,0 +1,148 @@
+*{margin: 0px; padding: 0px;}
+body
+{
+	background-image: url(black.jpg);
+}
+#header
+{
+	width: 100%;
+	height: 80px;
+	background: #333;
+	clear: both;
+}
+#navbar
+{
+	width: 1000px;
+}
+#navbar>li
+{
+	width: 200px;
+	list-style: none;
+	float: left;
+}
+li>a
+{
+	display: block;
+	color: white;
+	line-height: 80px;
+	text-align: center;
+	font-family: cursive;
+	font-feature-settings: 20px;
+	text-decoration: none;
+}
+li>a:hover
+{
+	color: grey;
+}
+.user
+{
+    width: 16%;
+    height: 220px;
+    background: #fff;
+    margin-left: 10px;
+    border: 2px solid #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    float: left;	
+}
+.image
+{
+	width: 100%;
+	height: 220px;
+}
+.nav
+ {
+    width: 50%;
+    height: 800px;
+    background: url(penbg.jpg);
+    background-size: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    float: left;
+    margin-left: 10%;
+}
+.clear 
+{ 
+	clear: both; 
+	width: 110%;
+}
+.username
+{
+    font-size: 50px;
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+}
+#Account
+{
+	font-size: 40px;
+	text-align: center;
+}
+.summary
+{
+	width: 40%;
+    height: 90px;
+    align-items: left;
+    font-size: 25px;
+    margin-left: 0%;
+    float: right;
+}
+
+.detail
+{
+    width: 60%;
+    height: 200px;
+	margin-left: 30%;
+    font-size: 25px;
+}
+th.th1
+{
+	text-align: left;
+	background-color: #CD5C5C;
+	background-image: url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+th.th2
+{
+	text-align: left;
+	background-color: #CD5C5C;
+	background-image: url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+th.th3
+{
+	text-align: left;
+	background-color: #CD5C5C;
+	background-image: url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+th.th4
+{
+	text-align: left;
+	background-color: #CD5C5C;
+	background-image: url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+th.th5
+{
+	text-align: left;
+	background-color: #CD5C5C;
+	background-image: url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+.nav a
+{
+	color: green;
+}
+
+

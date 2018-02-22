@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard page</title>
+	<link rel="stylesheet" type="text/css" href="dashStyle.css">
+	<meta name="viewport" content-type="" charset="utf-8">
+
+</head>
+<body>
+   <div id="header">
+   	
+   	<ul id="navbar">
+   		<li><a href="#">Home</a></li>
+   		<li><a href="Login.html">Log out</a></li>
+   	</ul>
+   </div>
+
+   <div class="clear">
+   	
+    <div class="user">
+    	<img src="userImage.jpg" class="image">
+    </div> 
+
+    <div class="nav">
+    	<h3 class="username">Hello User!!!</h3>
+    	<div class="list">
+    	  <p id="Account"><u>Your Account summary</u></p> 
+        
+        
+          <div class="summary">
+            <table> 
+            	
+             <tr>
+             	<td>Account Number:&nbsp &nbsp</td>
+             	<td>0009876543212344</td>
+             </tr>
+             <tr>
+               <td>Total Amount:&nbsp &nbsp &nbsp</td>
+               <td>$7000.10</td>
+              </tr>
+
+            </table>
+        </div>
+        <div class="detail">
+            <table id="myTable" border="1">
+            	<tr id="row">
+            	   <th onclick="sortTable(0)" class="th1">Date</th>	
+                    <th onclick="sortTable(1)" class="th2">Transactions</th>
+                    <th onclick="sortTable(2)" class="th3"> Debit</th>
+                    <th onclick="sortTable(3)" class="th4">&nbsp Credit</th>
+                    <th onclick="sortTable(4)" class="th5">&nbsp Balance</th>
+            	  </tr>
+            	  <tr>
+            	  	<td>17 Feb</td>
+            	  	<td>&nbsp &nbsp Adidas shoes<br>&nbsp &nbspCardxx5172<br> &nbsp &nbsp Value Date: 15/feb/2017</td>
+            	  	<td>&nbsp 50.00</td>
+            	  	<td>&nbsp</td>
+            	  	<td>&nbsp $6950.1</td>
+            	  </tr>
+            	  <tr>
+            	  	<td>16 Feb</td>
+                    <td>&nbsp &nbsp Transfer to chatr app<br>&nbsp &nbsp Sim 4G</td>
+                    <td>&nbsp 45.00</td>
+                    <td>&nbsp</td>
+                    <td>&nbsp $6905.1</td>
+            	  </tr>
+            	   <tr>
+            	   	 <td>10 Feb</td>
+            	   	 <td>&nbsp &nbsp Furniture</td>
+            	   	 <td>&nbsp 70.10</td>
+            	   	 <td>&nbsp</td>
+            	   	 <td>&nbsp $6835</td>
+            	   </tr>
+            	   <tr>
+            	   	 <td>8 Feb</td>
+            	   	 <td>&nbsp &nbsp clothes</td>
+            	   	 <td>&nbsp 110.23</td>
+            	   	 <td>&nbsp</td>
+            	   	 <td>&nbsp $6724.77</td>
+            	   </tr>
+            	   <tr>
+            	   	 <td>29 jan</td>
+            	   	 <td>&nbsp &nbsp Transfered to abc</td>
+            	   	 <td>&nbsp </td>
+            	   	 <td>&nbsp 600.37</td>
+            	   	 <td>&nbsp $6124.4</td>
+            	   </tr>
+            	   <tr>
+            	   	 <td>23 jan</td>
+            	   	 <td>&nbsp &nbsp Transfered to xyz</td>
+            	   	 <td>&nbsp </td>
+            	   	 <td>&nbsp 800.37</td>
+            	   	 <td>&nbsp $5324.03</td>
+            	   </tr>
+            	   <tr>
+            	   	 <td>18 jan</td>
+            	   	 <td>&nbsp &nbsp Grocery items</td>
+            	   	 <td>&nbsp 40.12</td>
+            	   	 <td>&nbsp</td>
+            	   	 <td>&nbsp $5283.91</td>
+            	   
+            </table>
+             <a href="Transaction.html">Transaction details</a>
+        </div>
+    	</div>
+    </div> 
+   </div>
+
+
+   <script>
+       function sortTable(n) 
+       {
+          var table, rows, change, i, x, y, shouldchange, dir, changeCount = 0;
+          table = document.getElementById("myTable");
+          change = true;
+  
+            dir = "asc"; 
+  
+         while (change) 
+         {
+    
+            change = false;
+            rows = table.getElementsByTagName("tr");
+    
+          for (i = 1; i < (rows.length - 1); i++) 
+          {    
+              shouldchange = false;
+      
+               x = rows[i].getElementsByTagName("td")[n];
+               y = rows[i + 1].getElementsByTagName("td")[n];
+      
+             if (dir == "asc") {
+             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+             {
+        
+                shouldchange= true;
+                break;
+             }
+          } 
+
+           else if (dir == "desc") 
+           {
+             if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          
+             shouldchange= true;
+             break;
+           }
+      }
+    }
+      if (shouldchange) 
+      {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+           switching = true;
+    
+          changeCount ++; 
+      } 
+      else
+       {
+            if (changeCount == 0 && dir == "asc") {
+            dir = "desc";
+            change = true;
+      }
+    }
+  }
+}
+  </script>
+
+</body>
+</html>
